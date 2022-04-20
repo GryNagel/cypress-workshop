@@ -3,8 +3,17 @@
   <h1>Cypress workshop</h1>
     <p>Dette er en test applikasjon for å leke med <a href="https://www.cypress.io/">Cypress</a> i forbindelse med intern fagdag. Applikasjonen viser blogginlegg og en random dadjoke, og bruker <a href="https://www.remix.run/">Remix</a>.
     </p>
+
+  <a href="https://github.com/GryNagel/cypress-workshop">
+    <img src="https://img.shields.io/static/v1?label=GryNagel&message=cypress-workshop&color=blue&logo=github" />
+  </a>
+  <a href="">
+    <img src="https://img.shields.io/github/last-commit/GryNagel/cypress-workshop" alt="last update" />
+  </a>
+   
 </div>
 
+# :notebook_with_decorative_cover: Innhold
 - [Om applikasjonen](#star2-om-applikasjonen)
   * [Tech Stack](#space_invader-tech-stack)
   * [Features](#dart-features)
