@@ -1,18 +1,52 @@
-# Cypress workshop
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/1500684/157764454-48ac8c71-a2a9-4b5e-b19c-edef8b8953d6.svg" alt="logo" width="200" height="auto" />
+  <h1>Cypress workshop</h1>
+    <p>Dette er en test applikasjon for å leke med [Cypress](https://www.cypress.io/) i forbindelse med intern fagdag.  
+    </p>
+</div>
 
-Dette er en test applikasjon for å leke med [Cypress](https://www.cypress.io/).  
+- [Om applikasjonen](#star2-om-applikasjonen)
+  * [Tech Stack](#space_invader-tech-stack)
+  * [Features](#dart-features)
+- [Kom i gang](#toolbox-kom-i-gang)
+  * [Prerequisites](#bangbang-prerequisites)
+  * [Oppsett](#gear-oppsett)
+- [Oppgaver](#book-oppgaver)
 
 Applikasjonen bruker [Remix](https://remix.run/)
 
-## Hva skal vi gjøre i dag?
+## :star2: Om applikasjonen
 
-## Steg 1: Sette opp applikasjon
+### :space_invader: Tech Stack
+<b>Applikasjon</b>
+  <ul>
+    <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
+    <li><a href="https://remix.run/">Remix</a></li>
+    <li><a href="https://reactjs.org/">React.js</a></li>
+  </ul>
 
-Krav: 
+<b>Database</b>
+  <ul>
+    <li><a href="https://www.prisma.io/">Prisma</a></li>
+    <li><a href="https://www.sqlite.org/">SQLite</a></li>
+  </ul>
+
+<b>Testing</b>
+  <ul>
+    <li><a href="https://www.cypress.io/">Cypress</a></li>
+    <li><a href="https://vitest.dev/">Vitest</a></li>
+  </ul>
+
+### :dart: Features
+
+## 	:toolbox: Kom i gang
+
+### :bangbang: Prerequisites 
 Node.js 14 eller høyere
 npm 7 eller høyere
 En editor av noe slag
 
+### :gear: Oppsett
 1. Klon repoet
 2. Kjør `npm i`
 3. Kopier .env.example og lag din egen session secret
@@ -21,4 +55,4 @@ En editor av noe slag
 
 Ta en kikk rundt i applikasjonen. 
 
-## Steg 2: Installere cypress
+## :book: Oppgaver
