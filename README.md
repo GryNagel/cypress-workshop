@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://user-images.githubusercontent.com/1500684/157764454-48ac8c71-a2a9-4b5e-b19c-edef8b8953d6.svg" alt="logo" width="200" height="auto" />
   <h1>Cypress workshop</h1>
-    <p>Dette er en test applikasjon for å leke med [Cypress](https://www.cypress.io/) i forbindelse med intern fagdag.  
+    <p>Dette er en test applikasjon for å leke med <a href="https://www.cypress.io/">Cypress</a> i forbindelse med intern fagdag. Applikasjonen viser blogginlegg og en random dadjoke, og bruker <a href="https://www.remix.run/">Remix</a>.
     </p>
 </div>
 
@@ -12,8 +12,7 @@
   * [Prerequisites](#bangbang-prerequisites)
   * [Oppsett](#gear-oppsett)
 - [Oppgaver](#book-oppgaver)
-
-Applikasjonen bruker [Remix](https://remix.run/)
+  * [Installere cypress](#installere-cypress)
 
 ## :star2: Om applikasjonen
 
@@ -38,13 +37,17 @@ Applikasjonen bruker [Remix](https://remix.run/)
   </ul>
 
 ### :dart: Features
+- Random dad joke: Viser en radom dadjoke fra [icanhazdadjoke](https://icanhazdadjoke.com/api)
+- Visning av blogg innlegg
+- Innlogging og opprettelse av ny konto
+- Mulighet til å lage nye blogg innlegg
 
 ## 	:toolbox: Kom i gang
 
 ### :bangbang: Prerequisites 
-Node.js 14 eller høyere
-npm 7 eller høyere
-En editor av noe slag
+- Node.js 14 eller høyere
+- npm 7 eller høyere
+- En editor av noe slag
 
 ### :gear: Oppsett
 1. Klon repoet
@@ -56,3 +59,6 @@ En editor av noe slag
 Ta en kikk rundt i applikasjonen. 
 
 ## :book: Oppgaver
+
+### Installere Cypress
+
