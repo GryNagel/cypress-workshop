@@ -16,9 +16,9 @@ En editor av noe slag
 1. Klon repoet
 2. Kjør `npm i`
 3. Kopier .env.example og lag din egen session secret
-4. 
+4. Kjør `npm run setup:db` for å sette opp og seede databasen
 5. Kjør `npm run dev`. Applikasjonen starter på [localhost:3000](http://localhost:3000/)
 
-Ta en kikk rundt i applikasjonen. Om du har 
+Ta en kikk rundt i applikasjonen. 
 
 ## Steg 2: Installere cypress
