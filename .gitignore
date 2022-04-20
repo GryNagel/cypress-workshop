@@ -1,0 +1,16 @@
+node_modules
+
+.cache
+.env
+.vercel
+.output
+.env
+
+/build/
+/public/build
+/api/
+
+/cypress/screenshots
+/cypress/videos
+/prisma/data.db
+/prisma/data.db-journal

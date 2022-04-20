@@ -1,0 +1,25 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: 2rem;
+}
+
+.card{
+    background-color: var(--primary);
+    color: var(--background); 
+    border-radius: 2rem;
+    padding: 4rem 2rem;
+}
+
+.card a{
+    color: var(--background); 
+    text-decoration-color: var(--secondary);
+}

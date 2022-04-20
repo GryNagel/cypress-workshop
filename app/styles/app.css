@@ -1,0 +1,83 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--background);
+    color: var(--text); 
+    font-weight: 400;
+}
+
+a{
+    color: var(--text);
+    text-decoration-color: var(--primary);
+    text-decoration-thickness: 3px;
+    text-underline-offset: -1px;
+}
+
+@media (prefers-color-scheme: dark) {
+    img {
+      filter: brightness(.8) contrast(1.2);
+    }
+    body {
+        font-weight: 300;
+    }
+}
+
+input{
+    border-radius: 0.5rem;
+    border: 2px solid var(--white);
+    transition: ease-out 0.2s;
+    padding: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:active, input:focus, input:focus-visible{
+    border: 2px solid var(--secondary); 
+    outline: none;
+}
+
+button {
+    border: none; 
+    background-color: var(--secondary); 
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+.center-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+.login {
+    background: var(--primary); 
+    border: 2px solid var(--white); 
+    border-radius: 1rem;
+    padding: 4rem;
+    color: var(--white);
+}
+
+.login a{
+    color: var(--white); 
+    text-decoration-color: var(--white); 
+}
+
+.login .form{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem; 
+}
+
+.text-input{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; 
+}
+
+.checkbox-input{
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 2rem auto;
+    align-items: center;
+}
