@@ -58,6 +58,8 @@
 - npm 7 eller høyere
 - En editor av noe slag
 
+OBS! Cypress er et program som har gui, det vil si at om du bruker WSL på Windows, må man gjøre litt greier for å få det til å fungere. Det er ikke noe vi kommer til å gå gjennom på workshopen, så vurder å gjennomføre workshopen i Windows. 
+
 ### :gear: Oppsett
 1. Klon repoet
 2. Kjør `npm i`
@@ -70,4 +72,15 @@ Ta en kikk rundt i applikasjonen.
 ## :book: Oppgaver
 
 ### Installere Cypress
+Kjør `npm install cypress --save-dev`, det vil installere cypress som en dev dependency i applikasjonen. 
 
+Kjør så `npx cypress open`. 
+
+Om det er første gangen du kjører bruker Cypress på maskinen vil det ta litt tid, men så bør du se: 
+
+![Cypress](/screenshots/cypress.png)
+
+Cypress kommer med en god del eksempler, og alt legger seg i en mappe som overraskende nok heter cypress. 
+
+
+![Run tests](/screenshots/run-tests.png)
