@@ -2,7 +2,6 @@
 
 Om du vil lese mer om organisering og skriving av Cypress tester finnder du mer informasjon [her](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests#What-you-ll-learn). 
 
-
 ## Setup/rydding 
 Begynn med å rydde bort eksempel tester fra cypress mappen slik at du sitter igjen med følgende struktur: 
 
