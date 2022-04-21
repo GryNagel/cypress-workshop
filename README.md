@@ -76,7 +76,7 @@ Ta en kikk rundt i applikasjonen.
 ‼️ viktig informasjon
 📖 oppgave 
 
-- [Oppgave 1 - Installere cyoress](oppgaver/oppgave1.md)
+- [Oppgave 1 - Installere cypress](oppgaver/oppgave1.md)
 - [Oppgave 2 - Skrive tester](oppgaver/oppgave2.md)
 - [Oppgave 2 - Skrive gøyere tester](oppgaver/oppgave3.md)
 - [Oppgave 3 - Mocke apier](oppgaver/oppgave4.md)
