@@ -42,7 +42,6 @@
 <b>Testing</b>
   <ul>
     <li><a href="https://www.cypress.io/">Cypress</a></li>
-    <li><a href="https://vitest.dev/">Vitest</a></li>
   </ul>
 
 ### :dart: Features
