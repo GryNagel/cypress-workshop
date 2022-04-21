@@ -121,4 +121,4 @@ Skriv om testene til å bryke react-testing-library sin `findByRole` i stedet fo
 
 "Fasit" etter denne oppgaven finner du på branchen [oppgave-2](https://github.com/GryNagel/cypress-workshop/tree/oppgave-2). 
 
-## [Neste oppgave ▶️](oppgave3.md)
+##  [◀️ Forrige oppgave](oppgave1.md) -  [Neste oppgave ▶️](oppgave3.md)

@@ -135,4 +135,4 @@ import './commands';
 
 "Fasit" etter denne oppgaven finner du på branchen [oppgave-3](https://github.com/GryNagel/cypress-workshop/tree/oppgave-3). 
 
-## [Neste oppgave ▶️](oppgave4.md)
+## [◀️ Forrige oppgave](oppgave2.md) - [Neste oppgave ▶️](oppgave4.md)
