@@ -18,7 +18,6 @@ declare global {
   }
 }
 
-
 function cleanupUser({ email }: { email?: string } = {}) {
   if (email) {
     deleteUserByEmail(email);
