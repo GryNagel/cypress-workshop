@@ -1,10 +1,10 @@
 # Skrive tester
 
-Om du vil lese mer om organisering og skriving av Cypress tester kan du finne mer informasjon [her](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests#What-you-ll-learn). 
+Om du vil lese mer om organisering og skriving av Cypress tester finnder du mer informasjon [her](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests#What-you-ll-learn). 
 
 
 ## Setup/rydding 
-Begynn med å rydde bort eksempel tester fra cypress mappen slik at du sitter igjen med følgende: 
+Begynn med å rydde bort eksempel tester fra cypress mappen slik at du sitter igjen med følgende struktur: 
 
 ```
 /cypress
@@ -23,15 +23,15 @@ Begynn med å rydde bort eksempel tester fra cypress mappen slik at du sitter ig
 
 For å kunne skrive ts i Cypress testene trenger vi å legge inn egen eslint og ts config. De kan du finne her: 
 - [tsconfig](https://github.com/GryNagel/cypress-workshop/blob/oppgave-2/cypress/tsconfig.json) 
-- [eslintconfig](https://github.com/GryNagel/cypress-workshop/blob/oppgave-2/cypress/.eslintrc) 
+- [.eslintrc](https://github.com/GryNagel/cypress-workshop/blob/oppgave-2/cypress/.eslintrc) 
 
-og legges i cypress mappen. 
+og de legges i cypress mappen. 
 
-! Om du får litt rare feil i editoren etter å ha lagt til eslint og tsconfingen -> restart editoren (f.eks. cy is not defined). 
+‼️ Om du får litt rare feil i editoren etter å ha lagt til eslint og tsconfingen -> restart editoren (f.eks. cy is not defined). 
 
 Alle js filer kan så renames til ts filer. 
 
-Vi trenger også å installere typer til test filene våre: `npm run @types/jest --save-dev` bør gjøre susen ettersom.
+Vi må også installere typer til test filene våre: `npm run @types/jest --save-dev` bør gjøre susen.
 
 Det siste steget er å fortelle cypress hvor testene skal kjøres. Det gjøres vet legge inn følgende i cypress/plugins/index.ts:
 
@@ -68,11 +68,11 @@ Om du er nysgjerrig på hva plugins filen er kan du lese mer [her](https://docs.
 Da er vi endelig klar for å skrive vår første test!
 
 ## Første test
-Pass på at applikasjonen kjører `npm run dev` og cypress `npx cypress open`. Når man bruker cypress open vil cypress følge med på filene og kjøre testene på nytt dersom du gjør endringer. Confingen vi la inn i /plugins vil gjøre at når vi kjører testene i dev så vil de gå mot applikasjonen vår som kjører på localhost:3000. 
+Pass på at applikasjonen kjører `npm run dev` og cypress `npx cypress open`. Når man bruker `cypress` open vil cypress følge med på filene og kjøre testene på nytt dersom du gjør endringer. Konfigurasjonen vi la inn i `/plugins` vil gjøre at når vi kjører testene i dev så vil de gå mot applikasjonen vår som kjører på [localhost:3000](localhost:3000). 
 
-Lag en ny fil i /fixtures som heter smoke.ts (eller organiser det akkurat som du vil!). 
+Lag en ny fil i /fixtures som heter smoke.ts (eller organiser testene akkurat som du vil!). 
 
-Vi begynner med en enkel test for å sjekke at headeren i applikasjonen er riktig. En samling med tester definerers ved å bruke en describle blokk: 
+Vi begynner med en enkel test for å sjekke at headeren i applikasjonen er riktig. En samling med tester defineres ved å bruke en describle blokk: 
 
 ```ts
 describe('smoke tests', () => {
@@ -90,18 +90,16 @@ it('should have application header',() => {
 ```
 
 `cy.visit()` åpner siden på rootnivå
-`cy.get()` brukes i dette tilfellet til å finne et html av typen `h1` som inneholder teksten "Hello cypress". 
+`cy.get()` brukes i dette tilfellet til å finne et html element av typen `h1` som inneholder teksten "Hello cypress". 
 
 Kjør testene og se om det fungerer!
 
 ## Andre test
-Skriv en til test som sjekker at tittelen "Posts" er på siden og sjekk at den kjøerer. 
+Skriv en til test som sjekker at tittelen "Posts" er på siden og sjekk at den kjører og er grønn. 
 
-Sjekk hva som skjer når om du tar bort `cy.visit("/")` i den første testen. 
+Tok du med cy.visit('/'); i test nummer to også? Fungerer det uten? 
 
-Spoiler! Den kjører fremdeles fint! Men hva om vi nå bytter plass på testene?
-
-Spoiler igjen! Da fungerer bare test 2. Det er litt kjipt å tester som avhenger testen før, om vi ommøblerer koden eller kjører den ene testen isolert så vil den ikke fungere. Dette kan vi fikse ved å bruke en beforeEach blokk: 
+Spoiler: det gjør det! Men hva om du bytter plass på testene? Da vil kun test nummmer en fungere. Det er litt kjipt å tester som avhenger testen før, om vi ommøblerer koden eller kjører den ene testen isolert så vil den ikke fungere. Dette kan vi fikse ved å bruke en beforeEach blokk: 
 
 ```ts
     describe('smoke tests', () => { 
@@ -111,7 +109,7 @@ Spoiler igjen! Da fungerer bare test 2. Det er litt kjipt å tester som avhenger
     //....
 ```
 
-Sånn! Da kan også cy.visit("/") fjernes fra de to andre testene. Cypress har også en del andre hooks som kan brukes til å sette opp testene. Mer info [her](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests#Hooks).
+Sånn! Da kan også cy.visit("/") fjernes fra de begge testene. Cypress har også en del andre hooks som kan brukes til å sette opp eller rydde for testene. Mer info [her](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests#Hooks).
 
 ## React testing library
 Cypress har en god del måter å få tak i elementer på, men man kan også bruke react-testing-library sine dom-queries for å få tak i elementer. 
@@ -120,6 +118,8 @@ Sett opp react-testing-library for Cypress ved å følge guiden her: https://tes
 
 Skriv om testene til å bryke react-testing-library sin `findByRole` i stedet for. Fordelen her er at om noen plutselig bestemmer seg for at headeren skal være en h2 i stedet for h1 så vil testen fremdeles fungere. 
 
-Om du trenger litt hjelp for hvordan å skrive om testene kan du se eksempler [her](https://testing-library.com/docs/cypress-testing-library/intro/#examples).
+Om du trenger litt hjelp med å se hvordan findByRole skal brukes kan du se eksempler [her](https://testing-library.com/docs/cypress-testing-library/intro/#examples).
 
 "Fasit" etter denne oppgaven finner du på branchen [oppgave-2](https://github.com/GryNagel/cypress-workshop/tree/oppgave-2). 
+
+## [Neste oppgave ▶️](oppgave3.md)
