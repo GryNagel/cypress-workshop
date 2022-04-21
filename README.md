@@ -71,6 +71,11 @@ Ta en kikk rundt i applikasjonen.
 
 ## :book: Oppgaver
 
+### Forklaring
+🦒 er en hjelpsom sjiraff som kommer med tips
+‼️ viktig informasjon
+📖 oppgave 
+
 - [Oppgave 1 - Installere cyoress](oppgaver/oppgave1.md)
 - [Oppgave 2 - Skrive tester](oppgaver/oppgave2.md)
 - [Oppgave 2 - Skrive gøyere tester](oppgaver/oppgave3.md)
