@@ -24,6 +24,7 @@
     "tiny-invariant": "^1.2.0"
   },
   "devDependencies": {
+    "@faker-js/faker": "^6.1.2",
     "@remix-run/dev": "^1.4.1",
     "@remix-run/eslint-config": "^1.4.1",
     "@remix-run/serve": "^1.4.1",

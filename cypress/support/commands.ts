@@ -1,28 +1,43 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+export {};
 
-import "@testing-library/cypress/add-commands";
+declare global {
+  namespace Cypress {
+    interface Chainable {
+      /**
+       * Deletes the current @user
+       *
+       * @returns {typeof cleanupUser}
+       * @memberof Chainable
+       * @example
+       *    cy.cleanupUser()
+       * @example
+       *    cy.cleanupUser({ email: 'whatever@example.com' })
+       */
+      cleanupUser: typeof cleanupUser;
+    }
+  }
+}
 
+
+function cleanupUser({ email }: { email?: string } = {}) {
+  if (email) {
+    deleteUserByEmail(email);
+  } else {
+    cy.get("@user").then((user) => {
+      const email = (user as { email?: string }).email;
+      if (email) {
+        deleteUserByEmail(email);
+      }
+    });
+  }
+  cy.clearCookie("__session");
+}
+
+function deleteUserByEmail(email: string) {
+  cy.exec(
+    `npx ts-node --require tsconfig-paths/register ./cypress/support/delete-user.ts "${email}"`
+  );
+  cy.clearCookie("__session");
+}
+
+Cypress.Commands.add("cleanupUser", cleanupUser);
