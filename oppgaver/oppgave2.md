@@ -28,9 +28,9 @@ og de legges i cypress mappen.
 
 ‼️ Om du får litt rare feil i editoren etter å ha lagt til eslint og tsconfingen -> restart editoren (f.eks. cy is not defined). 
 
-Alle js filer kan så renames til ts filer. 
+Alle .js filer kan så renames til .ts filer. 
 
-Vi må også installere typer til test filene våre: `npm run @types/jest --save-dev` bør gjøre susen.
+Vi må også installere typer til test filene våre: `npm i @types/jest --save-dev` bør gjøre susen.
 
 Det siste steget er å fortelle cypress hvor testene skal kjøres. Det gjøres vet legge inn følgende i cypress/plugins/index.ts:
 
