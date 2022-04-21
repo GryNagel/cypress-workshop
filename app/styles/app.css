@@ -54,7 +54,7 @@ button {
     background: var(--primary); 
     border: 2px solid var(--white); 
     border-radius: 1rem;
-    padding: 4rem;
+    padding: 2rem 4rem 4rem 4rem;
     color: var(--white);
 }
 
@@ -80,4 +80,8 @@ button {
     gap: 0.5rem;
     grid-template-columns: 2rem auto;
     align-items: center;
+}
+
+.error-text{
+    color: var(--error); 
 }

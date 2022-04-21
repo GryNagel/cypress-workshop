@@ -80,9 +80,10 @@ export default function LoginPage() {
     return (
         <div className="center-container">
             <div className="login">
+                <h2>Login</h2>
                 <Form method="post" className="form">
                     <div className="text-input">
-                        <label htmlFor="email">Email address</label>
+                        <label htmlFor="email">Email</label>
                         <div>
                             <input
                                 ref={emailRef}
@@ -96,7 +97,9 @@ export default function LoginPage() {
                                 aria-describedby="email-error"
                             />
                             {actionData?.errors?.email && (
-                                <div id="email-error">{actionData.errors.email}</div>
+                                <div className="error-text" id="email-error">
+                                    {actionData.errors.email}
+                                </div>
                             )}
                         </div>
                     </div>
@@ -114,7 +117,9 @@ export default function LoginPage() {
                                 aria-describedby="password-error"
                             />
                             {actionData?.errors?.password && (
-                                <div id="password-error">{actionData.errors.password}</div>
+                                <div className="error-text" id="password-error">
+                                    {actionData.errors.password}
+                                </div>
                             )}
                         </div>
                     </div>
