@@ -2,7 +2,6 @@
 
 Om du vil lese mer om organisering og skriving av Cypress tester finnder du mer informasjon [her](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests#What-you-ll-learn). 
 
-
 ## Setup/rydding 
 Begynn med å rydde bort eksempel tester fra cypress mappen slik at du sitter igjen med følgende struktur: 
 
@@ -29,9 +28,9 @@ og de legges i cypress mappen.
 
 ‼️ Om du får litt rare feil i editoren etter å ha lagt til eslint og tsconfingen -> restart editoren (f.eks. cy is not defined). 
 
-Alle js filer kan så renames til ts filer. 
+Alle .js filer kan så renames til .ts filer. 
 
-Vi må også installere typer til test filene våre: `npm run @types/jest --save-dev` bør gjøre susen.
+Vi må også installere typer til test filene våre: `npm i @types/jest --save-dev` bør gjøre susen.
 
 Det siste steget er å fortelle cypress hvor testene skal kjøres. Det gjøres vet legge inn følgende i cypress/plugins/index.ts:
 
@@ -70,7 +69,7 @@ Da er vi endelig klar for å skrive vår første test!
 ## Første test
 Pass på at applikasjonen kjører `npm run dev` og cypress `npx cypress open`. Når man bruker `cypress` open vil cypress følge med på filene og kjøre testene på nytt dersom du gjør endringer. Konfigurasjonen vi la inn i `/plugins` vil gjøre at når vi kjører testene i dev så vil de gå mot applikasjonen vår som kjører på [localhost:3000](localhost:3000). 
 
-Lag en ny fil i /fixtures som heter smoke.ts (eller organiser testene akkurat som du vil!). 
+📖  Lag en ny fil i cypress/integration som heter smoke.ts (eller organiser testene akkurat som du vil!). 
 
 Vi begynner med en enkel test for å sjekke at headeren i applikasjonen er riktig. En samling med tester defineres ved å bruke en describle blokk: 
 
@@ -118,8 +117,8 @@ Sett opp react-testing-library for Cypress ved å følge guiden her: https://tes
 
 Skriv om testene til å bryke react-testing-library sin `findByRole` i stedet for. Fordelen her er at om noen plutselig bestemmer seg for at headeren skal være en h2 i stedet for h1 så vil testen fremdeles fungere. 
 
-Om du trenger litt hjelp med å se hvordan findByRole skal brukes kan du se eksempler [her](https://testing-library.com/docs/cypress-testing-library/intro/#examples).
+🦒 Om du trenger litt hjelp med å se hvordan findByRole skal brukes kan du se eksempler [her](https://testing-library.com/docs/cypress-testing-library/intro/#examples).
 
 "Fasit" etter denne oppgaven finner du på branchen [oppgave-2](https://github.com/GryNagel/cypress-workshop/tree/oppgave-2). 
 
-## [Neste oppgave ▶️](oppgave3.md)
+##  [◀️ Forrige oppgave](oppgave1.md) -  [Neste oppgave ▶️](oppgave3.md)

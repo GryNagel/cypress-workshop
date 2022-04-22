@@ -80,10 +80,11 @@ export default function Join() {
     return (
         <div className="center-container">
             <div className="login">
+                <h2>Sign up</h2>
                 <Form method="post" className="form">
                     <div className="text-input">
                         <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                            Email address
+                            Email
                         </label>
                         <div className="mt-1">
                             <input
@@ -98,7 +99,9 @@ export default function Join() {
                                 aria-describedby="email-error"
                             />
                             {actionData?.errors?.email && (
-                                <div id="email-error">{actionData.errors.email}</div>
+                                <div id="email-error" className="error-text">
+                                    {actionData.errors.email}
+                                </div>
                             )}
                         </div>
                     </div>
@@ -116,7 +119,7 @@ export default function Join() {
                                 aria-describedby="password-error"
                             />
                             {actionData?.errors?.password && (
-                                <div className="pt-1 text-red-700" id="password-error">
+                                <div className="error-text" id="password-error">
                                     {actionData.errors.password}
                                 </div>
                             )}
