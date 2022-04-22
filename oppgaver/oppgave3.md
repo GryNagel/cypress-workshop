@@ -16,7 +16,7 @@ it('should allow you to register and login, then sign out', () => {
 })
 ```
 
-🦒 `.findByLabelText()`, `.findByRole()`, .type()` og `.click()`. 
+🦒 `.findByLabelText()`, `.findByRole()`, `.type()` og `.click()`. 
 
 <details>
     <summary>
@@ -45,7 +45,7 @@ En løsning på dette er å bruke et bibliotek som heter faker til å generere e
 
 📖 Installer faker: `npm i @faker-js/faker --save-dev`. 
 
-🦒 Fun fact om faker: ["colors.js og faker.js sabotert av utvikleren" - Kode24](https://www.kode24.no/artikkel/colorsjs-og-fakerjs-sabotert-av-utvikleren/75102531)
+🦒 "Fun" fact om faker: ["colors.js og faker.js sabotert av utvikleren" - Kode24](https://www.kode24.no/artikkel/colorsjs-og-fakerjs-sabotert-av-utvikleren/75102531)
 
 📖 Bruk faker til å generere epost og passord. Se eksempler på hva faker inneholder [faker.js](https://fakerjs.dev/guide/#overview)
 
@@ -147,7 +147,7 @@ import "@testing-library/cypress/add-commands";
 import './commands';
 ```
 
-📖 Kjør `cy.cleanupUser();` etter hver test. Se her for mer info [her](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests#Hooks) om hooks som Cypress tilbyr for å oppsett og rydding av tester. 
+📖 Kjør `cy.cleanupUser();` etter hver test. Se her for mer info [her](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests#Hooks) om hooks som Cypress tilbyr for å oppsett og rydding av tester. Legg også til brukeren i en variabel som Cypress kan få tak i når cleanupen blir kjørt: `cy.then(() => ({ email: loginForm.email })).as('user');` (legges rett etter opprettingen av `loginForm` constanten). 
 
 <details>
     <summary>
