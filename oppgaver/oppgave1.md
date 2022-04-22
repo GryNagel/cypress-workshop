@@ -36,6 +36,8 @@ Testene ligger under `cypress/integration/*`. Her er eslint veldig sinna fordi c
 }
 ```
 
-Resultet av installering av Cypress finner du om du sjekker ut [oppgave-1](https://github.com/GryNagel/cypress-workshop/tree/oppgave-1) branchen. 
+🦒  Du kan også velge hvilken nettleser du vil kjøre testene i. Jeg bruker Electron ettersom at jeg får litt trøbbel i Chrome når man begynner på oppgave 3 av denne workshopen. Det ser ut til at det kan henge sammen med at lastpass ligger i feltene, men 🤷‍♂️. Bruk hva du vil, men dette er en heads up i alle fall! 
+
+Resultet etter installering av Cypress finner du om du sjekker ut [oppgave-1](https://github.com/GryNagel/cypress-workshop/tree/oppgave-1) branchen. 
 
 ## [Neste oppgave ▶️](oppgave2.md)
