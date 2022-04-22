@@ -17,7 +17,6 @@ describe('join test', () => {
         
         cy.then(() => ({ email: loginForm.email })).as('user');
 
-        cy.visit('/');
         cy.findByRole('link', { name: /Login/i }).click();
         cy.findByRole('link', { name: /Sign up/i }).click();
 
