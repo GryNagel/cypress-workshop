@@ -35,8 +35,9 @@ Tips her er `.findByLabelText()`, `.type()` og `.click()`.
     })
     </pre>
 </details>
+</br>
 
-Om du har gjort som meg i eksempelet over innser du veldig kjapt at testene feiler etter første gang de går igjennom, og det er fordi at man ikke kan lage flere brukere med samme e-post 🤦‍♂️
+Om du har gjort som meg i eksempelet over innser du veldig fort at testene feiler etter første gang de går igjennom, og det er fordi at man ikke kan lage flere brukere med samme e-post 🤦‍♂️
 
 En løsning på dette er å bruke et bibliotek som heter faker til å generere eposter og passord til oss. 
 

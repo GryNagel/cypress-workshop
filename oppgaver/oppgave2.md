@@ -69,7 +69,7 @@ Da er vi endelig klar for å skrive vår første test!
 ## Første test
 Pass på at applikasjonen kjører `npm run dev` og cypress `npx cypress open`. Når man bruker `cypress` open vil cypress følge med på filene og kjøre testene på nytt dersom du gjør endringer. Konfigurasjonen vi la inn i `/plugins` vil gjøre at når vi kjører testene i dev så vil de gå mot applikasjonen vår som kjører på [localhost:3000](localhost:3000). 
 
-📖  Lag en ny fil i /fixtures som heter smoke.ts (eller organiser testene akkurat som du vil!). 
+📖  Lag en ny fil i cypress/integration som heter smoke.ts (eller organiser testene akkurat som du vil!). 
 
 Vi begynner med en enkel test for å sjekke at headeren i applikasjonen er riktig. En samling med tester defineres ved å bruke en describle blokk: 
 
