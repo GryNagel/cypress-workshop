@@ -8,7 +8,10 @@
     "setup:db": "prisma db push && prisma db seed",
     "migrate:db": "prisma migrate dev && prisma db seed",
     "build": "remix build",
-    "dev": "remix dev"
+    "dev": "remix dev",
+    "dev:tests": "cross-env NODE_ENV=development binode --require ./mocks -- @remix-run/dev:remix dev",
+    "start:mocks": "binode --require ./mocks -- @remix-run/serve:remix-serve build",
+    "test:e2e:dev": "start-server-and-test dev:tests http://localhost:3000 \"cypress open\""
   },
   "dependencies": {
     "@prisma/client": "^3.12.0",
@@ -35,13 +38,17 @@
     "@types/marked": "^4.0.3",
     "@types/react": "^17.0.24",
     "@types/react-dom": "^17.0.9",
+    "binode": "^1.0.5",
+    "cross-env": "^7.0.3",
     "cypress": "^9.5.4",
     "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-prettier": "^4.0.0",
+    "msw": "^0.39.2",
     "prettier": "^2.6.2",
     "prisma": "^3.12.0",
+    "start-server-and-test": "^1.14.0",
     "ts-node": "^10.7.0",
     "typescript": "^4.5.5"
   },
