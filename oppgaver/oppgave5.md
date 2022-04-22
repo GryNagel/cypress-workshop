@@ -12,3 +12,6 @@ Om du logger inn i applikasjonen og går til `http://localhost:3000/post/admin/n
 
 ## Mer api-testing
 Klarer du å få api-et til å feile, så du kan teste feilmeldingen?
+
+## Helt fritt valg
+Har du sett noe underveis som du har lyst til å utforske? Kjør på!
