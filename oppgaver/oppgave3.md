@@ -49,11 +49,11 @@ En løsning på dette er å bruke et bibliotek som heter faker til å generere e
 
 📖 Bruk faker til å generere epost og passord. 
 
-Flott! Men det er kanskje litt kjipt å legge inn en ny bruker i databasen for hver gang man kjører testen 🙈. Ta en kikk i databasen ved å kjøre `npx prisma studio`.
+Flott! Men det er kanskje litt kjipt å legge inn en ny bruker i databasen for hver gang man kjører testen 🙈. Ta en kikk i databasen ved å kjøre `npx prisma studio`. Det vil åpne oversikt og editeringsmuligheter i databasen på [localhost:5555/](http://localhost:5555/).
 
 Kanskje det kan være nyttig å rydde bort brukeren når vi ikke trenger den lengre?
 
-📖 Heldigvis har Remix eksempler på hvordan dette kan gjøres. Om du vil kan du prøve selv, ellers finner du koden som er stjelt fra Remix sin Indigo starter template her:
+📖 Heldigvis har Remix eksempler på hvordan dette kan gjøres. Om du vil kan du prøve selv, ellers finner du koden som er tatt fra Remix sin Indigo starter template her:
 
 cypress/support/commands.ts
 
@@ -134,7 +134,7 @@ import "@testing-library/cypress/add-commands";
 import './commands';
 ```
 
-📖 Kjør `cy.cleanupUser();` etter hver test. Se her for mer info [her](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests#Hooks) om hooks som Cypress tilbyr for å oppsett og rydding i tester. 
+📖 Kjør `cy.cleanupUser();` etter hver test. Se her for mer info [her](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests#Hooks) om hooks som Cypress tilbyr for å oppsett og rydding av tester. 
 
 "Fasit" etter denne oppgaven finner du på branchen [oppgave-3](https://github.com/GryNagel/cypress-workshop/tree/oppgave-3). 
 
