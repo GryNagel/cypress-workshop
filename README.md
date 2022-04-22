@@ -71,12 +71,12 @@ Ta en kikk rundt i applikasjonen.
 ## :book: Oppgaver
 
 ### Forklaring
-🦒 er en hjelpsom sjiraff som kommer med tips
-‼️ viktig informasjon
-📖 oppgave 
+🦒 er en hjelpsom sjiraff som kommer med tips   
+‼️ viktig informasjon   
+📖 oppgave   
 
 - [Oppgave 1 - Installere cypress](oppgaver/oppgave1.md)
 - [Oppgave 2 - Skrive tester](oppgaver/oppgave2.md)
-- [Oppgave 2 - Skrive gøyere tester](oppgaver/oppgave3.md)
-- [Oppgave 3 - Mocke apier](oppgaver/oppgave4.md)
-- [Oppgave 4 - Fritt valg](oppgaver/oppgave5.md)
+- [Oppgave 3 - Skrive gøyere tester](oppgaver/oppgave3.md)
+- [Oppgave 4 - Mocke apier](oppgaver/oppgave4.md)
+- [Oppgave 5 - Fritt valg](oppgaver/oppgave5.md)
