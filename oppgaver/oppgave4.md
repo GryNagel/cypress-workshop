@@ -10,7 +10,7 @@ Mer info om de forskjellige pakkene kan du finne her:
 - [start-server-and-test](https://www.npmjs.com/package/start-server-and-test)
 - [cross-env](https://www.npmjs.com/package/cross-env)
 
-📖 Neste steg er å lage en mappe på rot nivå som vi kaller `mocks` på topp nivå.
+📖 Neste steg er å lage en mappe som vi kaller `mocks` på topp nivå.
 
 📖 I /mocks trenger vi to filer: 
 
@@ -46,7 +46,7 @@ process.once('SIGTERM', () => server.close());
 
 Om vi nå kjører `npm run test:e2d:dev` vil den starte applikasjonen på localhost:3000, starte mock serveren og starte Cypress. 
 
-‼️ Stopp alt du har kjørende og kjør kun denne kommandoen nå. 
+‼️ Stopp alt du har kjørende og kjør kun `npm run test:e2d:dev` nå. 
 
 Sjekk outputen i terminalen når testene kjører. Ser du `[MSW] Warning: captured a request without a matching request handler: • GET https://icanhazdadjoke.com/`?
 
