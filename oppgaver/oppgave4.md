@@ -84,6 +84,19 @@ Da kan vi skrive en test for å sjekke at joken er synlig i applikasjonen også!
 
 📖 Lag en ny fil under cypress/integration og kall den `joke.ts`. Skriv en test som sjekker at teksten fra joken er synlig på skjermen. 
 
+<details>
+    <summary>Eksempel/spoiler</summary>
+    <pre>
+    describe('joke', () => { 
+        it('should show a joke from our mocked api', () => {
+            cy.visit('/');
+            cy.findByText("Joke tekst her").should('exist');
+        })
+    }
+    </pre>
+</details>
+</br>
+
 Flott! Da får vi testet at joken er synlig! Men hva om noen endrer teksten på den joken? Da vil testen vår knekke ettersom at vi har duplisert en string to steder! Hva med å dra joken ut i en egen konstant slik at vi kan bruke den både i testene og i mock serveren?
 
 Jeg har gjort dette ved å lage en fil under mocks kalt `mockText.ts`. Og eksporterer en `mockJoke` konstant derfra.
