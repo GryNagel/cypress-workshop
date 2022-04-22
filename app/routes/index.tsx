@@ -1,7 +1,7 @@
 import type { LinksFunction } from '@remix-run/node';
 import { json } from '@remix-run/node';
 
-import { Form, Link, Outlet, useLoaderData } from '@remix-run/react';
+import { Form, Link, useLoaderData } from '@remix-run/react';
 
 import { getPosts } from '~/models/post.server';
 import { getRandomJoke } from '~/models/joke.server';
@@ -43,6 +43,7 @@ export default function Index() {
                 {user ? (
                     <div>
                         {`Hello, ${user.email}`}
+                        <Link to="/post/admin"> Blog admin </Link>
                         <Form action="/logout" method="post">
                             <button type="submit">Logout</button>
                         </Form>

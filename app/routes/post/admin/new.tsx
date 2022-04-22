@@ -48,33 +48,36 @@ export default function NewPost() {
 
     return (
         <Form method="post">
-            <p>
-                <label>
-                    Post Title:{' '}
-                    {errors?.title ? <em className="text-red-600">{errors.title}</em> : null}
+            <div className="new-post-container">
+                <div className="text-input">
+                    <label>
+                        Post Title:{' '}
+                        {errors?.title ? <em className="text-red-600">{errors.title}</em> : null}
+                    </label>
                     <input type="text" name="title" />
-                </label>
-            </p>
-            <p>
-                <label>
-                    Post Slug:{' '}
-                    {errors?.slug ? <em className="text-red-600">{errors.slug}</em> : null}
+                </div>
+                <div className="text-input">
+                    <label>
+                        Post Slug:{' '}
+                        {errors?.slug ? <em className="text-red-600">{errors.slug}</em> : null}
+                    </label>
                     <input type="text" name="slug" />
-                </label>
-            </p>
-            <p>
-                <label htmlFor="markdown">
-                    Markdown:
-                    {errors?.markdown ? <em className="text-red-600">{errors.markdown}</em> : null}
-                </label>
-                <br />
-                <textarea id="markdown" rows={20} name="markdown" />
-            </p>
-            <p className="text-right">
-                <button type="submit" disabled={isCreating}>
-                    {isCreating ? 'Creating...' : 'Create Post'}
-                </button>
-            </p>
+                </div>
+                <div className="text-input">
+                    <label htmlFor="markdown">
+                        Markdown:
+                        {errors?.markdown ? (
+                            <em className="text-red-600">{errors.markdown}</em>
+                        ) : null}
+                    </label>
+                    <textarea id="markdown" rows={20} name="markdown" />
+                </div>
+                <p className="text-right">
+                    <button type="submit" disabled={isCreating}>
+                        {isCreating ? 'Creating...' : 'Create Post'}
+                    </button>
+                </p>
+            </div>
         </Form>
     );
 }
