@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://user-images.githubusercontent.com/1500684/157764454-48ac8c71-a2a9-4b5e-b19c-edef8b8953d6.svg" alt="logo" width="200" height="auto" />
   <h1>Cypress workshop</h1>
-    <p>Dette er en test applikasjon for å leke med <a href="https://www.cypress.io/">Cypress</a> i forbindelse med intern fagdag. Applikasjonen viser blogginlegg og en random dadjoke, og bruker <a href="https://www.remix.run/">Remix</a>.
+    <p>Dette er en test applikasjon for å leke med <a href="https://www.cypress.io/">Cypress</a> i forbindelse med intern fagdag. Applikasjonen viser blogginlegg og en random dadjoke, og bruker <a href="https://www.remix.run/">Remix</a>. Mye av det vi går gjennom i workshopen er greier som allerede er satt opp om man starter et nytt Remix prosjekt og velger "Indigo" som starter template!
     </p>
 
   <a href="https://github.com/GryNagel/cypress-workshop">
@@ -42,7 +42,6 @@
 <b>Testing</b>
   <ul>
     <li><a href="https://www.cypress.io/">Cypress</a></li>
-    <li><a href="https://vitest.dev/">Vitest</a></li>
   </ul>
 
 ### :dart: Features
@@ -72,12 +71,12 @@ Ta en kikk rundt i applikasjonen.
 ## :book: Oppgaver
 
 ### Forklaring
-🦒 er en hjelpsom sjiraff som kommer med tips
-‼️ viktig informasjon
-📖 oppgave 
+🦒 er en hjelpsom sjiraff som kommer med tips   
+‼️ viktig informasjon   
+📖 oppgave   
 
-- [Oppgave 1 - Installere cyoress](oppgaver/oppgave1.md)
+- [Oppgave 1 - Installere cypress](oppgaver/oppgave1.md)
 - [Oppgave 2 - Skrive tester](oppgaver/oppgave2.md)
-- [Oppgave 2 - Skrive gøyere tester](oppgaver/oppgave3.md)
-- [Oppgave 3 - Mocke apier](oppgaver/oppgave4.md)
-- [Oppgave 4 - Legge til funksjonalitet](oppgaver/oppgave5.md)
+- [Oppgave 3 - Skrive gøyere tester](oppgaver/oppgave3.md)
+- [Oppgave 4 - Mocke apier](oppgaver/oppgave4.md)
+- [Oppgave 5 - Fritt valg](oppgaver/oppgave5.md)

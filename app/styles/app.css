@@ -21,7 +21,7 @@ a{
     }
 }
 
-input{
+input, textarea{
     border-radius: 0.5rem;
     border: 2px solid var(--white);
     transition: ease-out 0.2s;
@@ -30,7 +30,8 @@ input{
     box-sizing: border-box;
 }
 
-input:active, input:focus, input:focus-visible{
+input:is(:active, :focus, :focus-visible), 
+textarea:is(:active, :focus, :focus-visible){
     border: 2px solid var(--secondary); 
     outline: none;
 }
