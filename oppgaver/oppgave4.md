@@ -10,11 +10,13 @@ Mer info om de forskjellige pakkene kan du finne her:
 - [start-server-and-test](https://www.npmjs.com/package/start-server-and-test)
 - [cross-env](https://www.npmjs.com/package/cross-env)
 
-📖 Neste steg er å lage en mappe som vi kaller `mocks` på topp nivå.
+📖 Neste steg er å lage en mappe som vi kaller `mocks` på topp nivå (samme nivå som `/cypress` og `app`)
 
-📖 I /mocks trenger vi to filer: 
+📖 I `/mocks` trenger vi to filer: 
 
-mocks/index.js som inneholder litt konfigurasjon:
+mocks/index.js som inneholder litt konfigurasjon 
+
+‼️ Merk .js! Det er fordi den inneholder konfigurasjon for TypeScript
 
 ```js
 require('tsconfig-paths/register');
