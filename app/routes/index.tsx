@@ -43,6 +43,7 @@ export default function Index() {
                 {user ? (
                     <div>
                         {`Hello, ${user.email}`}
+                        <Link to="/post/admin"> Blog admin </Link>
                         <Form action="/logout" method="post">
                             <button type="submit">Logout</button>
                         </Form>

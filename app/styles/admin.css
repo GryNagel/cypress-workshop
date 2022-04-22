@@ -1,3 +1,10 @@
 .admin-container{
     padding: 2rem;
 }
+
+.new-post-container{
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}

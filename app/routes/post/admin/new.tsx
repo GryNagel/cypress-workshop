@@ -48,20 +48,20 @@ export default function NewPost() {
 
     return (
         <Form method="post">
-            <div>
+            <div className="new-post-container">
                 <div className="text-input">
                     <label>
                         Post Title:{' '}
                         {errors?.title ? <em className="text-red-600">{errors.title}</em> : null}
-                        <input type="text" name="title" />
                     </label>
+                    <input type="text" name="title" />
                 </div>
                 <div className="text-input">
                     <label>
                         Post Slug:{' '}
                         {errors?.slug ? <em className="text-red-600">{errors.slug}</em> : null}
-                        <input type="text" name="slug" />
                     </label>
+                    <input type="text" name="slug" />
                 </div>
                 <div className="text-input">
                     <label htmlFor="markdown">
@@ -70,7 +70,6 @@ export default function NewPost() {
                             <em className="text-red-600">{errors.markdown}</em>
                         ) : null}
                     </label>
-                    <br />
                     <textarea id="markdown" rows={20} name="markdown" />
                 </div>
                 <p className="text-right">
