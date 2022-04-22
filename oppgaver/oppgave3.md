@@ -8,7 +8,7 @@ Til nå har vi testet at tekst vises på siden, men hva med å teste input feilt
 
 🦒 `.findByRole()` og `.click()` er nok nyttig her! Og [her](https://testing-library.com/docs/cypress-testing-library/intro/#examples) kan du finne noen eksempler. 
 
-📖 Neste steg er å få tak i epost og passord feltene og skrive inn tekst der, for så å trykke på "Create account". Vi kan også logge ut brukeren til slutt for å se at det fungerer, så ta utgangspunkt i at testen skal gjøre noe slikt: 
+📖 Neste steg er å få tak i epost og passord feltene og skrive inn tekst der, for så å trykke på "Create account" (når man trykker create account vil også brukeren bli innlogget om alt går bra). Vi kan også logge ut brukeren til slutt for å se at det fungerer, så ta utgangspunkt i at testen skal gjøre noe slikt: 
 
 ```ts
 it('should allow you to register and login, then sign out', () => {
