@@ -58,6 +58,8 @@ Det kommer fra msw som forteller oss at vi kaller et api som vi ikke har laget e
 
 📖 Om du vil prøve selv kan du finne eksempler [her](https://github.com/kentcdodds/kentcdodds.com/blob/main/mocks/start.ts). Modellen og api kallet til dadjokes finner du i app/models/joke.server.ts. 
 
+‼️ Når du gjør endringer i mock serveren er det mulig at du må restarte, så stopp og kjør `npm run test:e2e:dev` på nytt. 
+
 <details>
     <summary>Eksempel/spoiler</summary>
     <pre>
