@@ -10,11 +10,13 @@ Mer info om de forskjellige pakkene kan du finne her:
 - [start-server-and-test](https://www.npmjs.com/package/start-server-and-test)
 - [cross-env](https://www.npmjs.com/package/cross-env)
 
-📖 Neste steg er å lage en mappe på rot nivå som vi kaller `mocks` på topp nivå.
+📖 Neste steg er å lage en mappe som vi kaller `mocks` på topp nivå (samme nivå som `/cypress` og `app`)
 
-📖 I /mocks trenger vi to filer: 
+📖 I `/mocks` trenger vi to filer: 
 
-mocks/index.js som inneholder litt konfigurasjon:
+mocks/index.js som inneholder litt konfigurasjon 
+
+‼️ Merk .js! Det er fordi den inneholder konfigurasjon for TypeScript
 
 ```js
 require('tsconfig-paths/register');
@@ -44,9 +46,9 @@ process.once('SIGTERM', () => server.close());
     "test:e2e:dev": "start-server-and-test dev:tests http://localhost:3000 \"cypress open\""
 ```
 
-Om vi nå kjører `npm run test:e2d:dev` vil den starte applikasjonen på localhost:3000, starte mock serveren og starte Cypress. 
+Om vi nå kjører `npm run test:e2e:dev` vil den starte applikasjonen på localhost:3000, starte mock serveren og starte Cypress. 
 
-‼️ Stopp alt du har kjørende og kjør kun denne kommandoen nå. 
+‼️ Stopp alt du har kjørende og kjør kun `npm run test:e2e:dev` nå. 
 
 Sjekk outputen i terminalen når testene kjører. Ser du `[MSW] Warning: captured a request without a matching request handler: • GET https://icanhazdadjoke.com/`?
 
@@ -55,6 +57,8 @@ Det kommer fra msw som forteller oss at vi kaller et api som vi ikke har laget e
 🦒 Handlers skal inn i `setupServer()` funksjonen i /mocks/start.ts
 
 📖 Om du vil prøve selv kan du finne eksempler [her](https://github.com/kentcdodds/kentcdodds.com/blob/main/mocks/start.ts). Modellen og api kallet til dadjokes finner du i app/models/joke.server.ts. 
+
+‼️ Når du gjør endringer i mock serveren er det mulig at du må restarte, så stopp og kjør `npm run test:e2e:dev` på nytt. 
 
 <details>
     <summary>Eksempel/spoiler</summary>
@@ -83,6 +87,19 @@ Kult! Da får vi fanget opp GET requesten som går til ['https://icanhazdadjoke.
 Da kan vi skrive en test for å sjekke at joken er synlig i applikasjonen også!
 
 📖 Lag en ny fil under cypress/integration og kall den `joke.ts`. Skriv en test som sjekker at teksten fra joken er synlig på skjermen. 
+
+<details>
+    <summary>Eksempel/spoiler</summary>
+    <pre>
+    describe('joke', () => { 
+        it('should show a joke from our mocked api', () => {
+            cy.visit('/');
+            cy.findByText("Joke tekst her").should('exist');
+        })
+    }
+    </pre>
+</details>
+</br>
 
 Flott! Da får vi testet at joken er synlig! Men hva om noen endrer teksten på den joken? Da vil testen vår knekke ettersom at vi har duplisert en string to steder! Hva med å dra joken ut i en egen konstant slik at vi kan bruke den både i testene og i mock serveren?
 

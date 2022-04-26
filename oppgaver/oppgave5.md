@@ -11,7 +11,7 @@ Om du logger inn i applikasjonen og går til `http://localhost:3000/post/admin/n
 ‼️ Det er ingen gui for å slette blogg poster. Bør det kanskje være det? Velg selv om du vil slette test-postene direkte fra databasen, eller lage ui for å slette poster. 
 
 ## Mer api-testing
-Klarer du å få api-et til å feile, så du kan teste feilmeldingen?
+Klarer du å få api-et til å feile, så du kan teste feilmeldingen/teste om det eksisterer en feilmeldingshåndtering i det hele tatt 😅?
 
 ## Helt fritt valg
 Har du sett noe underveis som du har lyst til å utforske? Kjør på!
