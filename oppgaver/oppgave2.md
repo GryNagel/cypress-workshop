@@ -20,7 +20,7 @@ Begynn med å rydde bort eksempel tester fra cypress mappen slik at du sitter ig
     - index.js
 ```
 
-For å kunne skrive ts i Cypress testene trenger vi å legge inn egen eslint og ts config. De kan du finne her: 
+For å kunne skrive ts i Cypress testene trenger vi å legge inn egen eslint og ts config. Lag to nye filer i `/cypress`: `tsconfig.json` og `.eslintrc` De og legg inn innholder herfra: 
 - [tsconfig](https://github.com/GryNagel/cypress-workshop/blob/oppgave-2/cypress/tsconfig.json) 
 - [.eslintrc](https://github.com/GryNagel/cypress-workshop/blob/oppgave-2/cypress/.eslintrc) 
 
