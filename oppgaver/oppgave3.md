@@ -115,7 +115,7 @@ function deleteUserByEmail(email: string) {
 Cypress.Commands.add("cleanupUser", cleanupUser);
 ```
 
-cypress/commands/delete-user.ts
+cypress/support/delete-user.ts
 ```ts
 // Use this to delete a user by their email
 // Simply call this with:
@@ -141,7 +141,7 @@ async function deleteUser(email: string) {
 deleteUser(process.argv[2]);
 ```
 
-cypress/commands/index.ts
+cypress/support/index.ts
 ```ts
 import "@testing-library/cypress/add-commands";
 import './commands';
