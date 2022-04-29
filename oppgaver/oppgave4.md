@@ -46,9 +46,9 @@ process.once('SIGTERM', () => server.close());
     "test:e2e:dev": "start-server-and-test dev:tests http://localhost:3000 \"cypress open\""
 ```
 
-Om vi nå kjører `npm run test:e2e:dev` vil den starte applikasjonen på localhost:3000, starte mock serveren og starte Cypress. 
+‼️ Stopp alt du har kjørende. Om vi nå kjører `npm run test:e2e:dev` vil den starte applikasjonen på localhost:3000, starte mock serveren og starte Cypress. 
 
-‼️ Stopp alt du har kjørende og kjør kun `npm run test:e2e:dev` nå. 
+📖 Kjør `npm run test:e2e:dev`
 
 Sjekk outputen i terminalen når testene kjører. Ser du `[MSW] Warning: captured a request without a matching request handler: • GET https://icanhazdadjoke.com/`?
 
